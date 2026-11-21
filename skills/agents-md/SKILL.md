@@ -30,7 +30,9 @@ Extra focus from the user, if any: $ARGUMENTS
 Every line must come from something the repo states: code comments, docstrings,
 docs, config or scripts. A pattern you notice (every HTTP call happens to sit in
 one file, a folder's purpose guessed from its name) is not a rule; leave it out.
-Omit any section that ends up empty.
+One exception: when the repo states that a command is destructive or
+irreversible, add the guardrail that follows (don't run it unless the user asks;
+use the safe mode first). Omit any section that ends up empty.
 - **Project**: one line on what it is and its stack.
 - **Layout**: only relations the repo states that steer decisions — ownership
   and data flow (single source of truth for X, who writes the DB, which layer
