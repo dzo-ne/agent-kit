@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: stale-agents-md
+expected_outcome: |
+  The repo already has an AGENTS.md from an earlier run. Its "fetch.py is the
+  only module that makes HTTP requests" line happens to match the code, but
+  nothing in the repo states it, so it is an inference and gets dropped (or
+  moved to the report as a suggestion). The commit-style and vendor/ rules are
+  human policies and stay, as does `make test`. The report lists what was
+  removed and why.
+context:
+  scaffold_script: place-files.sh

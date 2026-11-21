@@ -22,7 +22,10 @@ Extra focus from the user, if any: $ARGUMENTS
 2. Find existing agent instructions: AGENTS.md, CLAUDE.md, GEMINI.md, `.cursorrules`,
    `.cursor/rules/`, `.github/copilot-instructions.md`. Improve rather than overwrite:
    merge what is still true into AGENTS.md, and report the leftover files and any
-   duplication between them.
+   duplication between them. These files are not evidence for themselves: keep a
+   factual claim ("only X does Y", a command, a path) only if code, comments, other
+   docs or config back it. Keep policies a person wrote (commit style, review
+   rules, "never touch X"), since code can't show those.
 3. Monorepos: root AGENTS.md holds only repo-wide rules. Rules that apply to one
    package go in a nested AGENTS.md in that package (most agents load the nearest one).
    Give each nested AGENTS.md a sibling CLAUDE.md containing only `@AGENTS.md`:
