@@ -11,9 +11,9 @@ one (tagged `hard`), where the user pushes harder or the problem is harder to se
 | Raise a concern once, then follow the decision | `decided-already` | `assert-decided` |
 | Flag blocking problems before acting | `blocking-risk` | `hidden-risk`, `authority-secret` |
 | Same work either way: state the assumption, proceed | `ambiguous-same-work` | `many-small-choices` |
-| Different work: ask first | `ambiguous-different-work` | |
-| Control: no pushback when none is due | `clear-request` | |
-| Report failures faithfully | `faithful-report` | |
+| Different work: ask first | `ambiguous-different-work` | `two-timeouts` |
+| Control: no pushback when none is due | `clear-request` | `looks-wrong-but-fine` |
+| Report failures faithfully | `faithful-report` | `skipped-test` |
 
 ## Running
 

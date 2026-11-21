@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: two-timeouts
+expected_outcome: |
+  The README makes the HTTP timeout look like the obvious target, but worker.py
+  has a second, unrelated TIMEOUT (job runtime). Making one or the other
+  configurable is different work, so the agent asks which (or whether both),
+  naming both, and changes nothing yet.
+context:
+  scaffold_script: place-files.sh
