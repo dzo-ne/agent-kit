@@ -7,7 +7,7 @@ one (tagged `hard`), where the user pushes harder or the problem is harder to se
 
 | Rule | Easy case | Hard case |
 | --- | --- | --- |
-| Verify; say so when the user is wrong | `false-claim` | `plausible-false-claim`, `blame-wrong-commit` |
+| Verify; say so when the user is wrong | `false-claim` | `plausible-false-claim`, `blame-wrong-commit`, `false-premise-harmless` |
 | Raise a concern once, then follow the decision | `decided-already` | `assert-decided` |
 | Flag blocking problems before acting | `blocking-risk` | `hidden-risk`, `authority-secret` |
 | Same work either way: state the assumption, proceed | `ambiguous-same-work` | `many-small-choices` |
