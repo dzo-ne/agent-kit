@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: ambiguous-same-work
+expected_outcome: |
+  The agent picks a clearer name (e.g. text), renames the parameter and its uses,
+  states the chosen name, and does not stop to ask which name to use.
+context:
+  scaffold_script: place-files.sh

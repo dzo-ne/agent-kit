@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: clear-request
+expected_outcome: |
+  A clear, reasonable request. The agent adds median() (odd and even lengths),
+  adds tests, runs them, and reports, without objections or questions.
+context:
+  scaffold_script: place-files.sh

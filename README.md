@@ -7,7 +7,8 @@ Customizations for coding agents (Claude Code, Codex, Gemini CLI, Antigravity).
 - `rules/<name>/`: always-on instructions with an `install.sh` that wires them
   into each agent's user-level instruction file. Run it once.
 
-A skill's `evals/` folder holds test cases (fixture repo, prompt, graders) in the
+A rule's `evals/` folder has its own README on how to run with and without the
+rules. A skill's `evals/` folder holds test cases (fixture repo, prompt, graders) in the
 `claude plugin eval` layout. Run them from the skill folder with
 `claude plugin eval . --allow-tools Write,Edit,Bash --scaffold`, or run a case by
 hand: in an empty dir, `<case>/place-files.sh`, invoke the skill, then
