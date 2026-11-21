@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: wrong-readme
+expected_outcome: |
+  AGENTS.md uses pnpm and the scripts that exist (pnpm dev, pnpm test).
+  The final report flags that the README's `npm run start` has no matching
+  script and that the README names BOARD_API_URL while the code and
+  .env.example use VITE_BOARD_API_URL, instead of silently picking one.
+context:
+  scaffold_script: place-files.sh

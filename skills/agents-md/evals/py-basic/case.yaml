@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: py-basic
+expected_outcome: |
+  A short AGENTS.md (at most 60 lines) that names the real test command
+  (make test / uv run pytest), records that store.py is the only module that
+  opens the SQLite database, and a CLAUDE.md whose first line is @AGENTS.md.
+  Nothing is committed.
+context:
+  scaffold_script: place-files.sh

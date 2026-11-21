@@ -1,0 +1,2 @@
+Money values are integer cents. Do not use float for amounts.
+Prefer small functions.

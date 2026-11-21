@@ -1,0 +1,7 @@
+{
+  "name": "@tasks/web",
+  "private": true,
+  "scripts": { "dev": "vite", "test": "vitest run" },
+  "dependencies": { "react": "^18.3.1" },
+  "devDependencies": { "vite": "^5.4.0", "vitest": "^2.1.0" }
+}

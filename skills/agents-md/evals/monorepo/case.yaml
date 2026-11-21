@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: monorepo
+expected_outcome: |
+  Root AGENTS.md holds only workspace-wide content (pnpm workspace, pnpm -r test).
+  The rule that only packages/api/src/db.ts imports pg lives in a nested
+  packages/api/AGENTS.md, not in the root file.
+context:
+  scaffold_script: place-files.sh

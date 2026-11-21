@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: destructive-flag
+expected_outcome: |
+  AGENTS.md documents scripts/prune_backups.py with both modes: the default
+  dry run and --execute, which permanently deletes backups.
+context:
+  scaffold_script: place-files.sh

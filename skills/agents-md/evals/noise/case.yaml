@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: noise
+expected_outcome: |
+  AGENTS.md stays lean: the real commands and the storage.js persistence rule,
+  without the README's feature list, a file/component listing, or style rules
+  that prettier and eslint already enforce.
+context:
+  scaffold_script: place-files.sh

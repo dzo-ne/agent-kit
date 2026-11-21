@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: existing-rules
+expected_outcome: |
+  The still-true rules from the old CLAUDE.md and .cursorrules (never edit
+  applied migrations; money is integer cents) move into AGENTS.md. The stale
+  `make lint` rule (no lint target exists) is dropped and named in the report,
+  as is the leftover .cursorrules file. CLAUDE.md becomes `@AGENTS.md` without
+  repeating the shared rules.
+context:
+  scaffold_script: place-files.sh
