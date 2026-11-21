@@ -27,10 +27,15 @@ Extra focus from the user, if any: $ARGUMENTS
    package go in a nested AGENTS.md in that package (most agents load the nearest one).
 
 ## What to include (as short as it can be; stop at ~60 lines / ~1k tokens)
-- **Project**: one or two lines on what it is and its stack.
-- **Layout**: only relations that steer decisions — ownership and data flow
-  (single source of truth for X, who writes the DB, which layer talks to which,
-  where new X must be added). One line each.
+Every line must come from something the repo states: code comments, docstrings,
+docs, config or scripts. A pattern you notice (every HTTP call happens to sit in
+one file, a folder's purpose guessed from its name) is not a rule; leave it out.
+Omit any section that ends up empty.
+- **Project**: one line on what it is and its stack.
+- **Layout**: only relations the repo states that steer decisions — ownership
+  and data flow (single source of truth for X, who writes the DB, which layer
+  talks to which, where new X must be added). One line each. Never describe
+  folders or files from their names.
 - **Rules**: invariants and footguns an agent would otherwise get wrong:
   data safety, "only place for X", migration rules, test isolation,
   commit conventions. Take them from existing docs and code; don't invent them.
@@ -47,7 +52,9 @@ First line `@AGENTS.md`. Below it, only what applies to Claude Code alone
 - Anything a grep answers in seconds: file lists, signatures, import/call graphs.
 - Anything a linter or formatter already enforces.
 - Copies of existing docs, feature lists, marketing text.
-- Anything you couldn't verify in the code.
+- Anything you couldn't verify in the code, and anything you inferred rather
+  than read. If an inference seems worth keeping, list it in the report as a
+  suggestion instead.
 
 ## Verify
 - Check that every symbol, path and command you name exists (grep definitions,
