@@ -24,6 +24,17 @@ else
   bad "CLAUDE.md missing or its first line is not @AGENTS.md"
 fi
 
+# Every nested AGENTS.md needs a sibling CLAUDE.md that imports it, or Claude
+# Code never sees it (it skips AGENTS.md once a CLAUDE.md exists above).
+while IFS= read -r f; do
+  c="$(dirname "$f")/CLAUDE.md"
+  if [[ -f $c ]] && [[ $(head -n1 "$c") == "@AGENTS.md" ]]; then
+    ok "$c imports @AGENTS.md"
+  else
+    bad "$f has no sibling CLAUDE.md starting with @AGENTS.md"
+  fi
+done < <(find . -mindepth 2 -name AGENTS.md -not -path './.git/*')
+
 commits=$(git rev-list --count HEAD 2>/dev/null || echo "?")
 [[ $commits == 1 ]] && ok "no commits made" || bad "repo has $commits commits (expected 1)"
 

@@ -25,6 +25,8 @@ Extra focus from the user, if any: $ARGUMENTS
    duplication between them.
 3. Monorepos: root AGENTS.md holds only repo-wide rules. Rules that apply to one
    package go in a nested AGENTS.md in that package (most agents load the nearest one).
+   Give each nested AGENTS.md a sibling CLAUDE.md containing only `@AGENTS.md`:
+   Claude Code skips AGENTS.md once a CLAUDE.md exists above it.
 
 ## What to include (as short as it can be; stop at ~60 lines / ~1k tokens)
 Every line must come from something the repo states: code comments, docstrings,
@@ -47,7 +49,8 @@ use the safe mode first). Omit any section that ends up empty.
   Never use @imports for them, so they're read only on demand.
 
 ## CLAUDE.md
-First line `@AGENTS.md`. Below it, only what applies to Claude Code alone
+One next to every AGENTS.md you write. First line `@AGENTS.md` (imports resolve
+relative to the CLAUDE.md). Below it, only what applies to Claude Code alone
 (hooks, skills, slash commands), if anything. Shared rules never go here.
 
 ## Leave out
