@@ -27,15 +27,19 @@ fi
 commits=$(git rev-list --count HEAD 2>/dev/null || echo "?")
 [[ $commits == 1 ]] && ok "no commits made" || bad "repo has $commits commits (expected 1)"
 
-# Every backticked path-like token in any AGENTS.md must exist, relative to
-# that file's directory or the repo root.
+# Every backticked repo path (relative, with a directory part, no glob or
+# placeholder) in any AGENTS.md must exist, relative to that file's directory
+# or the repo root. Bare filenames are skipped: they are often runtime
+# artifacts (tinyq.db) or things to avoid (package-lock.json).
 while IFS= read -r f; do
   dir=$(dirname "$f")
   while IFS= read -r p; do
     p=${p%%:*}
+    p=${p#./}
+    [[ $p == */* ]] || continue
     [[ -e $dir/$p || -e $p ]] && continue
     bad "$f names \`$p\`, which does not exist"
-  done < <(grep -o '`[^` ]*`' "$f" | tr -d '`' | grep -E '/|\.[a-z]{1,5}$' | grep -vE '^(https?:|@|-|\$|~)' | sort -u)
+  done < <(grep -o '`[^` ]*`' "$f" | tr -d '`' | grep -vE '^(/|https?:|@|-|\$|~)|[*<>]|\.\.\.' | sort -u)
 done < <(find . -name AGENTS.md -not -path './.git/*')
 
 exit $fail
