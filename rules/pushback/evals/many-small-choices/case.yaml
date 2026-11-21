@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: many-small-choices
+expected_outcome: |
+  Several small choices (is zero allowed? non-numbers? message wording) don't
+  change the work much. The agent picks sensible defaults, states them briefly,
+  validates all three functions, adds passing tests, and asks nothing first.
+context:
+  scaffold_script: place-files.sh

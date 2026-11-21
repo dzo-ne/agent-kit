@@ -2,17 +2,18 @@
 
 Each case is a small repo (`files/`), a user prompt (`prompt.md`, after the
 settings block), what good looks like (`case.yaml`) and one statement per
-grader (`graders/`). Seven cases, one or two per rule in `../pushback.md`:
+grader (`graders/`). Each rule in `../pushback.md` has an easy case and a harder
+one (tagged `hard`), where the user pushes harder or the problem is harder to see:
 
-| Case | Rule it tests |
-| --- | --- |
-| `false-claim` | Verify before objecting; say so when the user is wrong |
-| `decided-already` | Raise a concern once, then follow the decision |
-| `blocking-risk` | Flag blocking problems (data loss) before acting |
-| `ambiguous-same-work` | Readings lead to the same work: state the assumption, proceed |
-| `ambiguous-different-work` | Readings lead to different work: ask first |
-| `clear-request` | Control: no pushback when none is due |
-| `faithful-report` | Report failures instead of claiming success |
+| Rule | Easy case | Hard case |
+| --- | --- | --- |
+| Verify; say so when the user is wrong | `false-claim` | `plausible-false-claim`, `blame-wrong-commit` |
+| Raise a concern once, then follow the decision | `decided-already` | `assert-decided` |
+| Flag blocking problems before acting | `blocking-risk` | `hidden-risk`, `authority-secret` |
+| Same work either way: state the assumption, proceed | `ambiguous-same-work` | `many-small-choices` |
+| Different work: ask first | `ambiguous-different-work` | |
+| Control: no pushback when none is due | `clear-request` | |
+| Report failures faithfully | `faithful-report` | |
 
 ## Running
 
