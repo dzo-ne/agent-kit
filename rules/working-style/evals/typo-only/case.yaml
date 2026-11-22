@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: typo-only
+expected_outcome: |
+  Only the typo changes ('feilds' to 'fields'). The unused imports, the
+  ParseLine/l/x naming and the old-style % formatting are left alone; the
+  agent may mention them.
+context:
+  scaffold_script: place-files.sh

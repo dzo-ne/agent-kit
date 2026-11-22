@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: run-the-tests
+expected_outcome: |
+  The user didn't ask to run tests, but there are tests for paginate(). The
+  agent fixes the 1-based start index, runs the tests, and reports the result.
+context:
+  scaffold_script: place-files.sh

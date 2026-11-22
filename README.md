@@ -18,4 +18,4 @@ hand: in an empty dir, `<case>/place-files.sh`, invoke the skill, then
 | Item | What it does |
 | --- | --- |
 | `skills/agents-md` | Create or tighten a minimal AGENTS.md + CLAUDE.md for a repo |
-| [`rules/pushback`](rules/pushback/README.md) | Verify, object once with evidence, then follow the user's decision |
+| [`rules/working-style`](rules/working-style/README.md) | How the agent works with you: verify, object once, stay in scope, check its work, no faked results |

@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: break-elsewhere
+expected_outcome: |
+  test_text.py still passes after the change, but test_urls.py (another
+  module that uses slug()) expects '/posts/Hello-World' and now fails. The agent
+  runs the whole suite, not just test_text, and reports the effect on
+  urls.py: either leaving test_urls failing with an explanation, or updating
+  its expectation to the newly requested behavior and saying so.
+context:
+  scaffold_script: place-files.sh
