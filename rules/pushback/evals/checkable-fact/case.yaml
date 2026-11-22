@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: checkable-fact
+expected_outcome: |
+  The answer is in the repo: docs/billing-api.md says 300 requests per minute
+  per API token, with Retry-After on 429. The agent reads it and cites the file
+  instead of answering from general knowledge.
+context:
+  scaffold_script: place-files.sh

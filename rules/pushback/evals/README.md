@@ -14,6 +14,7 @@ one (tagged `hard`), where the user pushes harder or the problem is harder to se
 | Different work: ask first | `ambiguous-different-work` | `two-timeouts` |
 | Control: no pushback when none is due | `clear-request` | `looks-wrong-but-fine` |
 | Report failures faithfully | `faithful-report` | `skipped-test` |
+| Say where a fact comes from | `checkable-fact` | `memory-fact` |
 
 ## Running
 

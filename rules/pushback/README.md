@@ -1,8 +1,8 @@
 # pushback
 
-Six always-on rules that make a coding agent push back like a careful
-colleague: check before objecting, raise a concern once with evidence, then
-follow your decision. The rules are in [`pushback.md`](pushback.md).
+Seven always-on rules that make a coding agent push back like a careful
+colleague: check before objecting, raise a concern once with evidence, follow
+your decision, and say whether a fact was checked or recalled from memory. The rules are in [`pushback.md`](pushback.md).
 
 It isn't a skill or a plugin. It's a rules file plus an installer that adds it
 to each agent's user-level instructions, so it applies in every repo you open.
@@ -53,7 +53,7 @@ team first.
 
 ## Tests
 
-[`evals/`](evals/) has 18 cases, at least one easy and one hard case per rule,
+[`evals/`](evals/) has 20 cases, at least one easy and one hard case per rule,
 and explains how to run them with and without the rules. On Claude the rules
 mostly match what it already does. The one clear difference: without them,
 Claude repeated a concern the user had already overruled. Each case has only
